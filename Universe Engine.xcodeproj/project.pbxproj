@@ -15,6 +15,26 @@
 		B07B2A4C146343AF0000E819 /* Universe Engine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B2A2E146343AF0000E819 /* Universe Engine.framework */; };
 		B07B2A52146343AF0000E819 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07B2A50146343AF0000E819 /* InfoPlist.strings */; };
 		B07B2A55146343AF0000E819 /* Universe_EngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A54146343AF0000E819 /* Universe_EngineTests.m */; };
+		B07B2A76146343D70000E819 /* UniverseData.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A60146343D70000E819 /* UniverseData.h */; };
+		B07B2A77146343D70000E819 /* UniverseData.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A61146343D70000E819 /* UniverseData.m */; };
+		B07B2A78146343D70000E819 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A62146343D70000E819 /* World.h */; };
+		B07B2A79146343D70000E819 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A63146343D70000E819 /* World.m */; };
+		B07B2A7A146343D70000E819 /* XYPair.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A64146343D70000E819 /* XYPair.h */; };
+		B07B2A7B146343D70000E819 /* XYPair.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A65146343D70000E819 /* XYPair.m */; };
+		B07B2A7C146343D70000E819 /* Distance+World.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A67146343D70000E819 /* Distance+World.h */; };
+		B07B2A7D146343D70000E819 /* Distance+World.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A68146343D70000E819 /* Distance+World.m */; };
+		B07B2A7E146343D70000E819 /* Distance.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A69146343D70000E819 /* Distance.h */; };
+		B07B2A7F146343D70000E819 /* Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A6A146343D70000E819 /* Distance.m */; };
+		B07B2A80146343D70000E819 /* Force.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A6C146343D70000E819 /* Force.h */; };
+		B07B2A81146343D70000E819 /* Force.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A6D146343D70000E819 /* Force.m */; };
+		B07B2A82146343D70000E819 /* Gravity.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A6E146343D70000E819 /* Gravity.h */; };
+		B07B2A83146343D70000E819 /* Gravity.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A6F146343D70000E819 /* Gravity.m */; };
+		B07B2A84146343D70000E819 /* Momentum.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A70146343D70000E819 /* Momentum.h */; };
+		B07B2A85146343D70000E819 /* Momentum.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A71146343D70000E819 /* Momentum.m */; };
+		B07B2A86146343D70000E819 /* XYPair+Math.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A72146343D70000E819 /* XYPair+Math.h */; };
+		B07B2A87146343D70000E819 /* XYPair+Math.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A73146343D70000E819 /* XYPair+Math.m */; };
+		B07B2A88146343D70000E819 /* Universe.h in Headers */ = {isa = PBXBuildFile; fileRef = B07B2A74146343D70000E819 /* Universe.h */; };
+		B07B2A89146343D70000E819 /* Universe.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A75146343D70000E819 /* Universe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,17 +53,37 @@
 		B07B2A34146343AF0000E819 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B07B2A35146343AF0000E819 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B07B2A36146343AF0000E819 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B07B2A39146343AF0000E819 /* Universe Engine-Info.plist */ = {isa = PBXFileReference; path = "Universe Engine-Info.plist"; sourceTree = "<group>"; };
+		B07B2A39146343AF0000E819 /* Universe Engine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universe Engine-Info.plist"; sourceTree = "<group>"; };
 		B07B2A3B146343AF0000E819 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B07B2A3D146343AF0000E819 /* Universe Engine-Prefix.pch */ = {isa = PBXFileReference; path = "Universe Engine-Prefix.pch"; sourceTree = "<group>"; };
-		B07B2A3E146343AF0000E819 /* Universe_Engine.h */ = {isa = PBXFileReference; path = Universe_Engine.h; sourceTree = "<group>"; };
+		B07B2A3D146343AF0000E819 /* Universe Engine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universe Engine-Prefix.pch"; sourceTree = "<group>"; };
+		B07B2A3E146343AF0000E819 /* Universe_Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Universe_Engine.h; sourceTree = "<group>"; };
 		B07B2A3F146343AF0000E819 /* Universe_Engine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universe_Engine.m; sourceTree = "<group>"; };
 		B07B2A46146343AF0000E819 /* Universe EngineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Universe EngineTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07B2A47146343AF0000E819 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B07B2A4F146343AF0000E819 /* Universe EngineTests-Info.plist */ = {isa = PBXFileReference; path = "Universe EngineTests-Info.plist"; sourceTree = "<group>"; };
+		B07B2A4F146343AF0000E819 /* Universe EngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universe EngineTests-Info.plist"; sourceTree = "<group>"; };
 		B07B2A51146343AF0000E819 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B07B2A53146343AF0000E819 /* Universe_EngineTests.h */ = {isa = PBXFileReference; path = Universe_EngineTests.h; sourceTree = "<group>"; };
+		B07B2A53146343AF0000E819 /* Universe_EngineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Universe_EngineTests.h; sourceTree = "<group>"; };
 		B07B2A54146343AF0000E819 /* Universe_EngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universe_EngineTests.m; sourceTree = "<group>"; };
+		B07B2A60146343D70000E819 /* UniverseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniverseData.h; sourceTree = "<group>"; };
+		B07B2A61146343D70000E819 /* UniverseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniverseData.m; sourceTree = "<group>"; };
+		B07B2A62146343D70000E819 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		B07B2A63146343D70000E819 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		B07B2A64146343D70000E819 /* XYPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPair.h; sourceTree = "<group>"; };
+		B07B2A65146343D70000E819 /* XYPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPair.m; sourceTree = "<group>"; };
+		B07B2A67146343D70000E819 /* Distance+World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Distance+World.h"; sourceTree = "<group>"; };
+		B07B2A68146343D70000E819 /* Distance+World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Distance+World.m"; sourceTree = "<group>"; };
+		B07B2A69146343D70000E819 /* Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Distance.h; sourceTree = "<group>"; };
+		B07B2A6A146343D70000E819 /* Distance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Distance.m; sourceTree = "<group>"; };
+		B07B2A6C146343D70000E819 /* Force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Force.h; sourceTree = "<group>"; };
+		B07B2A6D146343D70000E819 /* Force.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Force.m; sourceTree = "<group>"; };
+		B07B2A6E146343D70000E819 /* Gravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gravity.h; sourceTree = "<group>"; };
+		B07B2A6F146343D70000E819 /* Gravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gravity.m; sourceTree = "<group>"; };
+		B07B2A70146343D70000E819 /* Momentum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Momentum.h; sourceTree = "<group>"; };
+		B07B2A71146343D70000E819 /* Momentum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Momentum.m; sourceTree = "<group>"; };
+		B07B2A72146343D70000E819 /* XYPair+Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XYPair+Math.h"; sourceTree = "<group>"; };
+		B07B2A73146343D70000E819 /* XYPair+Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XYPair+Math.m"; sourceTree = "<group>"; };
+		B07B2A74146343D70000E819 /* Universe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Universe.h; sourceTree = "<group>"; };
+		B07B2A75146343D70000E819 /* Universe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Universe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +152,7 @@
 			children = (
 				B07B2A3E146343AF0000E819 /* Universe_Engine.h */,
 				B07B2A3F146343AF0000E819 /* Universe_Engine.m */,
+				B07B2A5E146343D70000E819 /* Classes */,
 				B07B2A38146343AF0000E819 /* Supporting Files */,
 			);
 			path = "Universe Engine";
@@ -146,6 +187,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B07B2A5E146343D70000E819 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B07B2A5F146343D70000E819 /* Data */,
+				B07B2A66146343D70000E819 /* Math */,
+				B07B2A74146343D70000E819 /* Universe.h */,
+				B07B2A75146343D70000E819 /* Universe.m */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		B07B2A5F146343D70000E819 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B07B2A60146343D70000E819 /* UniverseData.h */,
+				B07B2A61146343D70000E819 /* UniverseData.m */,
+				B07B2A62146343D70000E819 /* World.h */,
+				B07B2A63146343D70000E819 /* World.m */,
+				B07B2A64146343D70000E819 /* XYPair.h */,
+				B07B2A65146343D70000E819 /* XYPair.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B07B2A66146343D70000E819 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				B07B2A67146343D70000E819 /* Distance+World.h */,
+				B07B2A68146343D70000E819 /* Distance+World.m */,
+				B07B2A69146343D70000E819 /* Distance.h */,
+				B07B2A6A146343D70000E819 /* Distance.m */,
+				B07B2A6B146343D70000E819 /* Forces */,
+				B07B2A72146343D70000E819 /* XYPair+Math.h */,
+				B07B2A73146343D70000E819 /* XYPair+Math.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		B07B2A6B146343D70000E819 /* Forces */ = {
+			isa = PBXGroup;
+			children = (
+				B07B2A6C146343D70000E819 /* Force.h */,
+				B07B2A6D146343D70000E819 /* Force.m */,
+				B07B2A6E146343D70000E819 /* Gravity.h */,
+				B07B2A6F146343D70000E819 /* Gravity.m */,
+				B07B2A70146343D70000E819 /* Momentum.h */,
+				B07B2A71146343D70000E819 /* Momentum.m */,
+			);
+			path = Forces;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,6 +246,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07B2A76146343D70000E819 /* UniverseData.h in Headers */,
+				B07B2A78146343D70000E819 /* World.h in Headers */,
+				B07B2A7A146343D70000E819 /* XYPair.h in Headers */,
+				B07B2A7C146343D70000E819 /* Distance+World.h in Headers */,
+				B07B2A7E146343D70000E819 /* Distance.h in Headers */,
+				B07B2A80146343D70000E819 /* Force.h in Headers */,
+				B07B2A82146343D70000E819 /* Gravity.h in Headers */,
+				B07B2A84146343D70000E819 /* Momentum.h in Headers */,
+				B07B2A86146343D70000E819 /* XYPair+Math.h in Headers */,
+				B07B2A88146343D70000E819 /* Universe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +366,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07B2A40146343AF0000E819 /* Universe_Engine.m in Sources */,
+				B07B2A77146343D70000E819 /* UniverseData.m in Sources */,
+				B07B2A79146343D70000E819 /* World.m in Sources */,
+				B07B2A7B146343D70000E819 /* XYPair.m in Sources */,
+				B07B2A7D146343D70000E819 /* Distance+World.m in Sources */,
+				B07B2A7F146343D70000E819 /* Distance.m in Sources */,
+				B07B2A81146343D70000E819 /* Force.m in Sources */,
+				B07B2A83146343D70000E819 /* Gravity.m in Sources */,
+				B07B2A85146343D70000E819 /* Momentum.m in Sources */,
+				B07B2A87146343D70000E819 /* XYPair+Math.m in Sources */,
+				B07B2A89146343D70000E819 /* Universe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
