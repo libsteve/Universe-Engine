@@ -20,15 +20,10 @@
 	}
 	return self;
 }
-- (void)dealloc{
-	[self.worlds release];
-	[super dealloc];
-}
 
 
 // add a world
 - (void)addWorld:(World *)world{
-	[world retain];
 	[self.worlds addObject:world];
 }
 
@@ -48,7 +43,6 @@
 // remove a world
 - (void)removeWorld:(World *)world{
 	[self.worlds removeObject:world];
-	[world release];
 }
 
 // remove a world with name
@@ -58,15 +52,12 @@
 	if (![world.name isEqualTo:errorName]) {
 		[self.worlds removeObject:world];
 	}
-	[errorName release];
-	[world release];
 }
 
 
 // get an enumerator for all the worlds
 - (NSEnumerator *)worldEnum{
 	NSEnumerator * worldEnum = [worlds objectEnumerator];
-	[worldEnum autorelease];
 	return worldEnum;
 }
 
@@ -77,12 +68,9 @@
 	World * current;
 	while (current = [worldEnum nextObject]) {
 		if ([current.name isEqualTo:name]) {
-			[worldEnum release];
 			return current;
 		}
 	}
-	[worldEnum release];
-	[current release];
 	return [[World alloc] initWithName:@"WORLD_NOT_FOUND"];
 }
 

@@ -13,23 +13,17 @@
 @implementation Distance (World)
 
 + (double)distanceFromWorld:(World *)a ToWorld:(World *)b{
-	[a retain];
-	[b retain];
 	
 	double xchange = a.position.X - b.position.X;
 	double ychange = a.position.Y - b.position.Y;
 	
 	double distance = sqrt( pow(xchange, 2.0) + pow(ychange, 2.0) );
 	
-	[a release];
-	[b release];
 	
 	return distance;
 }
 
 + (double)angleFromWorld:(World *)a ToWorld:(World *)b{
-	[a retain];
-	[b retain];
 	
 	double xchange = a.position.X - b.position.X;
 	double ychange = a.position.Y - b.position.Y;
@@ -43,8 +37,6 @@
 		angle += M_PI * 2;
 	}
 	
-	[a release];
-	[b release];
 	
 	return angle;
 }

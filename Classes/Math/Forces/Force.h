@@ -19,7 +19,6 @@
 @property (assign) double K;
 
 - (id)init;
-- (void)dealloc;
 
 - (void)updateBetween:(World *)a And:(World *)b;
 

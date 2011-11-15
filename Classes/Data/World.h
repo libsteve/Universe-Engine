@@ -26,13 +26,13 @@
 
 @property (assign) double mass;
 
-@property (retain, nonatomic) XYPair * position;
-@property (retain, nonatomic) XYPair * velocity;
-@property (retain, nonatomic) XYPair * acceleration;
+@property (strong, nonatomic) XYPair * position;
+@property (strong, nonatomic) XYPair * velocity;
+@property (strong, nonatomic) XYPair * acceleration;
 
-@property (retain, nonatomic) XYPair * nextAcceleration;
+@property (strong, nonatomic) XYPair * nextAcceleration;
 
-@property (retain, nonatomic) NSString * name;
+@property (strong, nonatomic) NSString * name;
 
 /*-------------init methods--------------*/
 
@@ -42,7 +42,6 @@
 			  Mass:(double)worldMass 
 		  Position:(XYPair *)worldPosition 
 		  Velocity:(XYPair *)worldVelocity;
-- (void)dealloc;
 
 /*-------------update methods--------------*/
 

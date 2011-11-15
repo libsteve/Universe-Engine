@@ -24,10 +24,9 @@
 
 @property (nonatomic) double tick;
 
-@property (retain, nonatomic) NSMutableSet * forces;
+@property (strong, nonatomic) NSMutableSet * forces;
 
 - (id)init;
-- (void)dealloc;
 
 // add a force to the universe
 - (void)addForce:(Force *)force;

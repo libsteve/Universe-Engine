@@ -18,10 +18,9 @@
 
 }
 
-@property (readonly, retain) NSMutableSet * worlds;
+@property (readonly, strong) NSMutableSet * worlds;
 
 - (id)init;
-- (void)dealloc;
 
 // add world to universe
 - (void)addWorld:(World *)world;

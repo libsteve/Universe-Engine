@@ -65,27 +65,16 @@
 	}
 	return self;
 }
-- (void)dealloc{
-	[self.name release];
-	[self.position release];
-	[self.velocity release];
-	[self.acceleration release];
-	[self.nextAcceleration release];
-	[super dealloc];
-}
 
 ///////////////////////////////////////////////////////////////////
 /*-------------------------update methods------------------------*/
 ///////////////////////////////////////////////////////////////////
 
 - (void)addAcceleration:(XYPair *)addition{
-	[addition retain];
 	[self.nextAcceleration add:addition];
-	[addition release];
 }
 
 - (void)updateAcceleration{
-	[self.acceleration release];
 	self.acceleration = self.nextAcceleration;
 	self.nextAcceleration = [[XYPair alloc] init];
 }
@@ -95,15 +84,13 @@
 	double y =self.acceleration.Y;
 	XYPair * velocityChange = [[XYPair alloc] initWithX:x*time Y:y*time];
 	[self.velocity add:velocityChange];
-	[velocityChange release];
 }
 
 - (void)updatePositionFor:(double)time{
 	double x = self.velocity.X;
-	double y =self.velocity.Y;
+	double y = self.velocity.Y;
 	XYPair * positionChange = [[XYPair alloc] initWithX:x*time Y:y*time];
 	[self.velocity add:positionChange];
-	[positionChange release];
 }
 
 - (void)updateFor:(double)time{

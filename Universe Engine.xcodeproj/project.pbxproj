@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B07B2A32146343AF0000E819 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B2A31146343AF0000E819 /* Cocoa.framework */; };
 		B07B2A3C146343AF0000E819 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07B2A3A146343AF0000E819 /* InfoPlist.strings */; };
-		B07B2A40146343AF0000E819 /* Universe_Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = B07B2A3F146343AF0000E819 /* Universe_Engine.m */; };
 		B07B2A48146343AF0000E819 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B2A47146343AF0000E819 /* SenTestingKit.framework */; };
 		B07B2A49146343AF0000E819 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B2A31146343AF0000E819 /* Cocoa.framework */; };
 		B07B2A4C146343AF0000E819 /* Universe Engine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B2A2E146343AF0000E819 /* Universe Engine.framework */; };
@@ -56,8 +55,6 @@
 		B07B2A39146343AF0000E819 /* Universe Engine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universe Engine-Info.plist"; sourceTree = "<group>"; };
 		B07B2A3B146343AF0000E819 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B07B2A3D146343AF0000E819 /* Universe Engine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universe Engine-Prefix.pch"; sourceTree = "<group>"; };
-		B07B2A3E146343AF0000E819 /* Universe_Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Universe_Engine.h; sourceTree = "<group>"; };
-		B07B2A3F146343AF0000E819 /* Universe_Engine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universe_Engine.m; sourceTree = "<group>"; };
 		B07B2A46146343AF0000E819 /* Universe EngineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Universe EngineTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07B2A47146343AF0000E819 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B07B2A4F146343AF0000E819 /* Universe EngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universe EngineTests-Info.plist"; sourceTree = "<group>"; };
@@ -150,8 +147,6 @@
 		B07B2A37146343AF0000E819 /* Universe Engine */ = {
 			isa = PBXGroup;
 			children = (
-				B07B2A3E146343AF0000E819 /* Universe_Engine.h */,
-				B07B2A3F146343AF0000E819 /* Universe_Engine.m */,
 				B07B2A5E146343D70000E819 /* Classes */,
 				B07B2A38146343AF0000E819 /* Supporting Files */,
 			);
@@ -190,10 +185,10 @@
 		B07B2A5E146343D70000E819 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B07B2A5F146343D70000E819 /* Data */,
-				B07B2A66146343D70000E819 /* Math */,
 				B07B2A74146343D70000E819 /* Universe.h */,
 				B07B2A75146343D70000E819 /* Universe.m */,
+				B07B2A5F146343D70000E819 /* Data */,
+				B07B2A66146343D70000E819 /* Math */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -365,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B07B2A40146343AF0000E819 /* Universe_Engine.m in Sources */,
 				B07B2A77146343D70000E819 /* UniverseData.m in Sources */,
 				B07B2A79146343D70000E819 /* World.m in Sources */,
 				B07B2A7B146343D70000E819 /* XYPair.m in Sources */,
@@ -467,6 +461,8 @@
 		B07B2A59146343AF0000E819 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -481,6 +477,8 @@
 		B07B2A5A146343AF0000E819 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -495,6 +493,7 @@
 		B07B2A5C146343AF0000E819 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universe Engine/Universe Engine-Prefix.pch";
@@ -507,6 +506,7 @@
 		B07B2A5D146343AF0000E819 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universe Engine/Universe Engine-Prefix.pch";
@@ -535,6 +535,7 @@
 				B07B2A5A146343AF0000E819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B07B2A5B146343AF0000E819 /* Build configuration list for PBXNativeTarget "Universe EngineTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +544,7 @@
 				B07B2A5D146343AF0000E819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

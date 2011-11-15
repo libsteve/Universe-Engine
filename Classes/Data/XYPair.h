@@ -21,6 +21,5 @@
 
 - (id)init;
 - (id)initWithX:(double)x Y:(double)y;
-- (void)dealloc;
 
 @end

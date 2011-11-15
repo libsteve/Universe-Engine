@@ -26,8 +26,6 @@
 }
 
 - (void)updateBetween:(World *)a And:(World *)b{
-	[a retain];
-	[b retain];
 	
 	double dist = [Distance distanceFromWorld:a ToWorld:b];
 	
@@ -47,11 +45,7 @@
 	[a addAcceleration:accelerationA];
 	[b addAcceleration:accelerationB];
 	
-	[accelerationA release];
-	[accelerationB release];
 	
-	[a release];
-	[b release];
 }
 
 @end

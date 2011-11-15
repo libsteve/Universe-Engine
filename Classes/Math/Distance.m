@@ -13,23 +13,17 @@
 @implementation Distance
 
 + (double)distanceFrom:(XYPair *)a To:(XYPair *)b{
-	[a retain];
-	[b retain];
 	
 	double xchange = a.X - b.X;
 	double ychange = a.Y - b.Y;
 	
 	double distance = sqrt( pow(xchange, 2.0) + pow(ychange, 2.0) );
 	
-	[a release];
-	[b release];
 	
 	return distance;
 }
 
 + (double)angleFrom:(XYPair *)a To:(XYPair *)b{
-	[a retain];
-	[b retain];
 	
 	double xchange = a.X - b.X;
 	double ychange = a.Y - b.Y;
@@ -43,8 +37,6 @@
 		angle += M_PI * 2;
 	}
 	
-	[a release];
-	[b release];
 	
 	return angle;
 }
@@ -64,7 +56,6 @@
 	y = 0 - y;
 	
 	XYPair * result = [[XYPair alloc] initWithX:x Y:y];
-	[result autorelease];
 	return result;
 	
 }

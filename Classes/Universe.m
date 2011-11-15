@@ -25,10 +25,6 @@
 	}
 	return self;
 }
-- (void)dealloc{
-	[self.forces release];
-	[super dealloc];
-}
 
 // add a force to the universe
 - (void)addForce:(Force *)force{
@@ -37,78 +33,67 @@
 
 // compute the results of the forces
 - (void)calculateTick{
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	
-	NSMutableSet * visited = [[NSMutableSet alloc] init];
-	
-	NSEnumerator * enumWorlds = [self worldEnum];
-	World * world;
-	while(world = [enumWorlds nextObject]){
+		NSMutableSet * visited = [[NSMutableSet alloc] init];
 		
-		if (![visited containsObject:world]) {
-			NSEnumerator * enumWorlds2 = [self worldEnum];
-			World * world2;
-			while(world2 = [enumWorlds2 nextObject]){
-				
-				if(world != world2 && ![visited containsObject:world2]){
-					[self calculateForcesFrom:world To:world2];
+		NSEnumerator * enumWorlds = [self worldEnum];
+		World * world;
+		while(world = [enumWorlds nextObject]){
+			
+			if (![visited containsObject:world]) {
+				NSEnumerator * enumWorlds2 = [self worldEnum];
+				World * world2;
+				while(world2 = [enumWorlds2 nextObject]){
+					
+					if(world != world2 && ![visited containsObject:world2]){
+						[self calculateForcesFrom:world To:world2];
+					}
+					
 				}
-				
+				[visited addObject:world];
 			}
-			[enumWorlds2 release];
-			[visited addObject:world];
+			
 		}
 		
+	
 	}
-	[enumWorlds release];
-	
-	[visited release];
-	
-	[pool drain];
 }
 
 // calculate all the forces between these two worlds
 - (void)calculateForcesFrom:(World *)a To:(World *)b{
-	[a retain];
-	[b retain];
 	
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	
-	NSEnumerator * enumForces = [self.forces objectEnumerator];
+		NSEnumerator * enumForces = [self.forces objectEnumerator];
+		
+		Force * force;
+		
+		while (force = [enumForces nextObject]) {
+			[force updateBetween:a And:b];
+		}
+		
 	
-	Force * force;
-	
-	while (force = [enumForces nextObject]) {
-		[force updateBetween:a And:b];
 	}
 	
-	[enumForces release];
-	
-	[pool drain];
-	
-	[a release];
-	[b release];
 }
 
 // apply the forces to the universe
 - (void)applyTick{
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	
-	NSEnumerator * worldEnum = [self worldEnum];
-	
-	World * current;
-	
-	while (current = [worldEnum nextObject]) {
-		[current retain];
+		NSEnumerator * worldEnum = [self worldEnum];
 		
-		[current updateFor:self.tick];
+		World * current;
 		
-		[current release];
+		while (current = [worldEnum nextObject]) {
+			
+			[current updateFor:self.tick];
+			
+		}
+		
+	
 	}
-	
-	[worldEnum release];
-	
-	[pool drain];
 }
 
 // increment the universe one tick

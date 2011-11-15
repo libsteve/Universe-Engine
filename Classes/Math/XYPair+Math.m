@@ -13,17 +13,13 @@
 @implementation XYPair (Math)
 
 - (void)add:(XYPair	*)addition{
-	[addition retain];
 	self.X += addition.X;
 	self.Y += addition.Y;
-	[addition release];
 }
 
 - (void)subtract:(XYPair *)subtraction{
-	[subtraction retain];
 	self.X -= subtraction.X;
 	self.Y -= subtraction.Y;
-	[subtraction release];
 }
 
 - (void)multiply:(double)constant{

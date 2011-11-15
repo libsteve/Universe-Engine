@@ -20,9 +20,6 @@
 	}
 	return self;
 }
-- (void)dealloc{
-	[super dealloc];
-}
 
 - (void)updateBetween:(World *)a And:(World *)b{
 	
